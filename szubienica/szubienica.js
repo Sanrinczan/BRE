@@ -68,14 +68,14 @@ function start()
 	for (i=0; i<=34; i++)
 	{
 		var element = "lit" + i; //nadajemy kazdemu idik np lit 1...
-		tresc_diva = tresc_diva + '<div class="litera" onclick="sprawdz('+i+')" id="'+element+'">'+litery[i]+'</div>'; //class jak w css, robimy lancuch, doklejamy literke na i-tym miejscu, jak klikniemy uruchamia funkcje sprawdz dla i 
+		tresc_diva = tresc_diva + '<div class="litera" onclick="sprawdz('+i+')" id="'+element+'">'+litery[i]+'</div>'; //class jak w css, robimy lancuch, doklejamy literke na i-tym miejscu, jak klikniemy uruchamia funkcje sprawdz dla itego argumentu
 		if ((i+1) % 7 ==0) tresc_diva = tresc_diva + '<div style="clear:both;"></div>'; //co 7 nowa linia
 	}
 	
 	document.getElementById("alfabet").innerHTML = tresc_diva;
 	
 	
-	wypisz_haslo();
+	wypisz_haslo(); //odswiezanie hasla
 }
 
 String.prototype.ustawZnak = function(miejsce, znak)
