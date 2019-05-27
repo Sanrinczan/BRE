@@ -9,7 +9,7 @@ var no = new Audio("no.wav");
 
 var haslo1 = "";
 
-for (i=0; i<dlugosc; i++)
+for (i=0; i<dlugosc; i++) //wypelnienie hasla ---
 {
 	if (haslo.charAt(i)==" ") haslo1 = haslo1 + " ";
 	else haslo1 = haslo1 + "-";
@@ -22,7 +22,7 @@ function wypisz_haslo()
 
 window.onload = start;
 
-var litery = new Array(35);
+var litery = new Array(35); //tablica z literami
 
 litery[0] = "A";
 litery[1] = "Ą";
@@ -60,8 +60,6 @@ litery[32] = "Z";
 litery[33] = "Ż";
 litery[34] = "Ź";
 
-
-
 function start()
 {
 	
@@ -69,9 +67,9 @@ function start()
 	
 	for (i=0; i<=34; i++)
 	{
-		var element = "lit" + i;
-		tresc_diva = tresc_diva + '<div class="litera" onclick="sprawdz('+i+')" id="'+element+'">'+litery[i]+'</div>';
-		if ((i+1) % 7 ==0) tresc_diva = tresc_diva + '<div style="clear:both;"></div>';
+		var element = "lit" + i; //nadajemy kazdemu idik np lit 1...
+		tresc_diva = tresc_diva + '<div class="litera" onclick="sprawdz('+i+')" id="'+element+'">'+litery[i]+'</div>'; //class jak w css, robimy lancuch, doklejamy literke na i-tym miejscu, jak klikniemy uruchamia funkcje sprawdz dla i 
+		if ((i+1) % 7 ==0) tresc_diva = tresc_diva + '<div style="clear:both;"></div>'; //co 7 nowa linia
 	}
 	
 	document.getElementById("alfabet").innerHTML = tresc_diva;
