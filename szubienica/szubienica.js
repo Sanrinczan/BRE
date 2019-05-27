@@ -1,4 +1,4 @@
-var haslo = "Bez pracy nie ma kołaczy";
+var haslo = "Płynie wisła po krainie";
 haslo = haslo.toUpperCase();
 
 var dlugosc = haslo.length;
@@ -118,7 +118,7 @@ function sprawdz(nr)
 		document.getElementById(element).style.color = "#C00000";
 		document.getElementById(element).style.border = "3px solid #C00000";
 		document.getElementById(element).style.cursor = "default";	
-		document.getElementById(element).setAttribute("onclick",";");		
+		document.getElementById(element).setAttribute("onclick",";");	//srednik nam zablokuje ponowne klikniecie, pusta instrukcja
 		
 		//skucha
 		ile_skuch++;
