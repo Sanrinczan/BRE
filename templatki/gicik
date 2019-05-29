@@ -1,0 +1,38 @@
+na masterze stworzyc plik z opisem hobby i zdjeciem przestawiajacym je, 
+potem stworzyc nowa galaz i na niej zmienic tekst hobby i zdjecie na nowe, 
+potem przejsc na mastera i dodac cos w stylu 'to jest moje nowe hobby' 
+w naglowku i zmergowac
+
+1. Odpalam swojego githuba https://github.com/mpszczola, loguję się
+2. Zakładam repozytorium s201131 publiczne
+3. Tworzę folder na pulpicie
+4. Tworzę w folderze plik tekstowy hobby.txt z tekstem w środku
+	np. "Moje ulubione hobby to gra w siatkówkę". 
+5. Ściągam z internetu zdjęcie gry w siatkówkę. Nazywam siatkowka.jpg. Umieszczam w folderze
+6. Otwieram w tym folderze konsole
+7. git init
+8. git remote add origin https://github............
+9. git add .
+10. git commit -m "Dodanie na mastera"
+11. git push origin master
+12. tworze branch newbranch i przechodze na niego
+13. zmieniam zawartosc pliku hobby.txt na "Moje nowe hobby to kino"
+14. dodaje do folderu kino.jpeg i USUWAM siatkowka.jpg
+15. git add hobby.txt
+16. git add kino.jpeg
+17. git commit -m "Zmiany na branchu"
+18. git push origin newbranch
+19. git checkout master
+20. otwieram plik hobby.txt i dopisuje na poczatku "Nagłówek hobby"
+21. zapisuje i wychodze
+22. git add hobby.txt
+23. git commit -m "Zmiana na masterze"
+24. git merge newbranch
+25. pojawia się konflikt, otwieram plik hobby.txt i usuwam niepotrzebne rzeczy
+26. git add .
+27. git commit -m "Zmiany dalsze"
+28. git merge newbranch
+29. git push origin master
+
+
+
