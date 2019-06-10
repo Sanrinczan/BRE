@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8" />
+	
+	<script type="text/javascript">
+	
+		function sprawdz(){
+			var liczba = document.getElementById("pole").value;
+			var liczba2 = document.getElementById("pole2").value;
+			//document.write(liczba);
+			if (liczba>0) document.getElementById("wynik").innerHTML="dodatnia";
+			else if (liczba<0) document.getElementById("wynik").innerHTML="ujemna";
+			else if (liczba==0) document.getElementById("wynik").innerHTML="zero";
+			else document.getelementById("wynik").innerHTML="to nie liczba";
+		}
+		function sprawdzWieksza(){
+			var liczba = document.getElementById("pole").value;
+			var liczba2 = document.getElementById("pole2").value;
+			if (liczba > liczba2) document.getElementById("wynik").innerHTML=liczba;
+			else document.getElementById("wynik").innerHTML=liczba2;
+		}
+		function roznica(){
+			var liczba = document.getElementById("pole").value;
+			var liczba2 = document.getElementById("pole2").value;
+			var roznica = Math.abs(liczba - liczba2);
+			document.getElementById("wynik3").innerHTML=roznica;
+		}
+		function tablica(){
+			var liczba = document.getElementById("pole").value;
+			var liczba2 = document.getElementById("pole2").value;
+			var roznica = Math.abs(liczba - liczba2);
+			var napis = "";
+			if(liczba > liczba2) {var wieksza = liczba; var mniejsza = liczba2;}
+			else {var wieksza = liczba2; var mniejsza = liczba}
+			for(i=mniejsza; i<=wieksza; i++){
+			 napis = napis +i+ " ";
+			}
+			document.getElementById("wynik4").innerHTML=napis;
+			
+		}
+	</script>
+	
+</head>
+<body>
+	<h1>Kalkulator liczb</h1>
+	<br>
+	<input type="text" id = "pole" />
+	<br><br/>
+	<input type="text" id = "pole2" />
+	<br><br/>
+	<input type = "submit" value="Sprawdz czy dodatnia" onclick="sprawdz()"/>
+	<br><br/>
+	<input type = "submit" value="Sprawdz ktora wieksza" onclick="sprawdzWieksza()"/>
+	<br><br/>
+	<input type = "submit" value="Sprawdz roznice" onclick="roznica()"/>
+	<br><br/>
+	<input type = "submit" value="Tablica pomiedzy" onclick="tablica()"/>
+	<br><br/>
+	<div id="wynik"></div>
+	<div id="wynik2"></div>
+	<div id="wynik3"></div>
+	<div id="wynik4"></div>
+</body>
